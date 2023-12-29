@@ -24,7 +24,9 @@ export default function Home() {
               />
               <div>
                 <p className="text-sm text-gray-900 dark:text-gray-500 ">
-                  <strong><em>Hosted by</em></strong>
+                  <strong>
+                    <em>Hosted by</em>
+                  </strong>
                 </p>
                 <p className="text-sm text-gray-500">
                   <strong>Panav Mhatre</strong>
@@ -65,10 +67,37 @@ export default function Home() {
 
       <section className="pl-40 pr-40 dark:bg-gray-900">
         <iframe
-          className="border-radius:12px"
+          className="border-radius:12px mb-5"
           src="https://open.spotify.com/embed/episode/4LjiyQlJqcsdkfXFOz67uv?utm_source=generator"
           width="100%"
           height="352"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+        <iframe
+          className="border-radius:12px mb-5"
+          src="https://open.spotify.com/embed/episode/7jOnKfZgSZVPufM71mCuu9?utm_source=generator"
+          width="100%"
+          height="352"
+          frameBorder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+        <iframe
+          className="border-radius:12px mb-5"
+          src="https://open.spotify.com/embed/episode/7jOnKfZgSZVPufM71mCuu9?utm_source=generator"
+          width="100%"
+          height="352"
+          frameBorder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+        <iframe
+          className="border-radius:12px mb-5"
+          src="https://open.spotify.com/embed/episode/1zMBFTSJK4Mo5Yerwn0GHu?utm_source=generator"
+          width="100%"
+          height="352"
+          frameBorder="0"
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
         ></iframe>
