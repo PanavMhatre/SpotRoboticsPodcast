@@ -1,25 +1,29 @@
+'use client';
 import React from "react";
 import Robot from "../assets/LogoRobot.png";
 import Image from "next/image";
+import Link from "next/link"; // Add this line
+import { usePathname } from "next/navigation";
+
 function NavBar() {
+  const pathname = usePathname();
   return (
     <div>
       <nav className="bg-white border-gray-200  mt-5 mb-5">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a
-            href="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
-            <Image
-              src={Robot}
-              width={50}
-              height={50}
-              alt="Picture of the author"
-            />{" "}
-            <span className="self-center text-2xl font-semibold whitespace-nowrap">
-              <strong>Spot Robotics Podcast</strong>
-            </span>
-          </a>
+          <Link href="/">
+            <div className="flex items-center space-x-3 rtl:space-x-reverse">
+              <Image
+                src={Robot}
+                width={50}
+                height={50}
+                alt="Picture of the author"
+              />{" "}
+              <span className="self-center text-2xl font-semibold whitespace-nowrap">
+                <strong>Spot Robotics Podcast</strong>
+              </span>
+            </div>
+          </Link>
           <button
             data-collapse-toggle="navbar-default"
             type="button"
@@ -47,36 +51,30 @@ function NavBar() {
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
               <li>
-                <a
-                  href="/"
-                  className="block py-2 px-3 text-primary rounded md:bg-transparent md:text-primary md:p-0"
-                >
-                  <strong>Home</strong>
-                </a>
+                <Link href="/">
+                  <div className={`block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 ${pathname === '/' ? 'block py-2 px-3 text-primary rounded md:bg-transparent md:text-primary md:p-0' : ''}`}>
+                    <strong>Home</strong>
+                  </div>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/blog"
-                  className="block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0"
-                >
-                  <strong>Blog</strong>
-                </a>
+                <Link href="/blog">
+                  <div className={`block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 ${pathname === '/blog' ? 'block py-2 px-3 text-primary rounded md:bg-transparent md:text-primary md:p-0' : ''}`}>
+                    <strong>Blog</strong>
+                  </div>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/contact"
-                  className="block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0"
-                >
-                  <strong>Contact</strong>
-                </a>
+                <Link href="/contact">
+                  <div className={`block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 ${pathname === '/contact' ? 'block py-2 px-3 text-primary rounded md:bg-transparent md:text-primary md:p-0' : ''}`}>
+                    <strong>Contact</strong>
+                  </div>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0"
-                >
+                <div className="block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">
                   <strong>Subscribe to Podcast</strong>
-                </a>
+                </div>
               </li>
             </ul>
           </div>
