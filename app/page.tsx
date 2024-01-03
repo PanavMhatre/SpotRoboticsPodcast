@@ -2,6 +2,7 @@ import NavBar from "./components/NavBar";
 import Image from "next/image";
 import Logo from "./assets/Podcast.png";
 import PanavImage from "./assets/PanavSquareCircleTheme.png";
+import Footer from "./components/Footer";
 export default function Home() {
   return (
     <div>
@@ -132,6 +133,7 @@ export default function Home() {
           loading="lazy"
         ></iframe>
       </section>
+      <Footer></Footer>
     </div>
   );
 }
