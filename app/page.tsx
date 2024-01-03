@@ -2,6 +2,7 @@ import NavBar from "./components/NavBar";
 import Image from "next/image";
 import Logo from "./assets/Podcast.png";
 import PanavImage from "./assets/PanavSquareCircleTheme.png";
+import Footer from "./components/Footer";
 export default function Home() {
   return (
     <div>
@@ -41,7 +42,7 @@ export default function Home() {
             </div>
             <button
               type="button"
-              className="mt-4 w-90 text-white bg-primary hover:bg-primary focus:outline-none focus:ring-4 
+              className="mt-7 w-90 text-white bg-primary hover:bg-primary focus:outline-none focus:ring-4 
               focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-4 mb-2"
             >
               <strong>Subscribe to Podcast</strong>
@@ -132,6 +133,7 @@ export default function Home() {
           loading="lazy"
         ></iframe>
       </section>
+      <Footer></Footer>
     </div>
   );
 }
