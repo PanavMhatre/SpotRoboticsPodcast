@@ -98,6 +98,7 @@ function home() {
       </section>
 
       <section className="pl-40 pr-40 mt-10">
+      <iframe className="mb-5 border-radius:12px" src="https://open.spotify.com/embed/episode/4LjiyQlJqcsdkfXFOz67uv?utm_source=generator" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         <iframe
           className="border-radius:12px mb-5"
           src="https://open.spotify.com/embed/episode/4LjiyQlJqcsdkfXFOz67uv?utm_source=generator"
