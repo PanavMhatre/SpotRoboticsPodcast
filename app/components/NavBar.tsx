@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React from "react";
 import Robot from "../assets/LogoRobot.png";
 import Image from "next/image";
@@ -49,32 +49,53 @@ function NavBar() {
             </svg>
           </button>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
+            <ul className="items-center font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
               <li>
                 <Link href="/">
-                  <div className={`block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 ${pathname === '/' ? 'block py-2 px-3 text-primary rounded md:bg-transparent md:text-primary md:p-0' : ''}`}>
+                  <div
+                    className={`block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 ${
+                      pathname === "/"
+                        ? "block py-2 px-3 text-primary rounded md:bg-transparent md:text-primary md:p-0"
+                        : ""
+                    }`}
+                  >
                     <strong>Home</strong>
                   </div>
                 </Link>
               </li>
               <li>
                 <Link href="/blog">
-                  <div className={`block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 ${pathname === '/blog' ? 'block py-2 px-3 text-primary rounded md:bg-transparent md:text-primary md:p-0' : ''}`}>
+                  <div
+                    className={`block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 ${
+                      pathname === "/blog"
+                        ? "block py-2 px-3 text-primary rounded md:bg-transparent md:text-primary md:p-0"
+                        : ""
+                    }`}
+                  >
                     <strong>Blog</strong>
                   </div>
                 </Link>
               </li>
               <li>
                 <Link href="/contact">
-                  <div className={`block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 ${pathname === '/contact' ? 'block py-2 px-3 text-primary rounded md:bg-transparent md:text-primary md:p-0' : ''}`}>
+                  <div
+                    className={`block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 ${
+                      pathname === "/contact"
+                        ? "block py-2 px-3 text-primary rounded md:bg-transparent md:text-primary md:p-0"
+                        : ""
+                    }`}
+                  >
                     <strong>Contact</strong>
                   </div>
                 </Link>
               </li>
               <li>
-                <div className="block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">
-                  <strong>Subscribe to Podcast</strong>
-                </div>
+                <button
+                  type="button"
+                  className="text-white bg-primary focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 focus:outline-none dark:focus:ring-blue-800"
+                >
+                  Subscribe to the Podcast
+                </button>
               </li>
             </ul>
           </div>
