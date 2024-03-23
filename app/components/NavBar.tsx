@@ -77,6 +77,19 @@ function NavBar() {
                 </Link>
               </li>
               <li>
+                <Link href="/episodes">
+                  <div
+                    className={`block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 ${
+                      pathname === "/episodes"
+                        ? "block py-2 px-3 text-primary rounded md:bg-transparent md:text-primary md:p-0"
+                        : ""
+                    }`}
+                  >
+                    <strong>Episodes</strong>
+                  </div>
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact">
                   <div
                     className={`block py-2 px-3 text-gray-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 ${

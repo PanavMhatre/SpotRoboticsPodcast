@@ -98,6 +98,11 @@ function home() {
         </div>
       </section>
 
+      <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight md:text-5xl xl:text-6xl mx-auto mt-10 text-center">
+    <strong className="text-black">Popular Episodes</strong>
+</h1>
+
+
       <section className="pl-40 pr-40 mt-10">
         <iframe
           className="mb-5 border-radius:12px"
